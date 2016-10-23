@@ -9,12 +9,16 @@ python3 main.py -j xbox360:0 -p 1 -s snes -o $OUTPUT_PATH/snes_p1.cfg
 python3 main.py -j xbox360:1 -p 2 -s snes -o $OUTPUT_PATH/snes_p2.cfg
 python3 main.py -j ps3:0 -p 1 -s snes -o $OUTPUT_PATH/snes_p1.cfg
 python3 main.py -j ps3:1 -p 2 -s snes -o $OUTPUT_PATH/snes_p2.cfg
+python3 main.py -j sfc30:0 -p 1 -s snes -o $OUTPUT_PATH/snes_p1.cfg
+python3 main.py -j sfc30:1 -p 2 -s snes -o $OUTPUT_PATH/snes_p2.cfg
 
 # PC Engine
 python3 main.py -j xbox360:0 -p 1 -s pce -o $OUTPUT_PATH/pce_p1.cfg
 python3 main.py -j xbox360:1 -p 2 -s pce -o $OUTPUT_PATH/pce_p2.cfg
 python3 main.py -j ps3:0 -p 1 -s pce -o $OUTPUT_PATH/pce_p1.cfg
 python3 main.py -j ps3:1 -p 2 -s pce -o $OUTPUT_PATH/pce_p2.cfg
+python3 main.py -j sfc30:0 -p 1 -s pce -o $OUTPUT_PATH/pce_p1.cfg
+python3 main.py -j sfc30:1 -p 2 -s pce -o $OUTPUT_PATH/pce_p2.cfg
 
 # Nintendo 64
 python3 main.py -j n64:0 -p 1 -s n64 -o $OUTPUT_PATH/n64_p1.cfg
@@ -25,3 +29,9 @@ python3 main.py -j xbox360:0 -p 1 -s nes -o $OUTPUT_PATH/nes_p1.cfg
 python3 main.py -j xbox360:1 -p 2 -s nes -o $OUTPUT_PATH/nes_p2.cfg
 python3 main.py -j ps3:0 -p 1 -s nes -o $OUTPUT_PATH/nes_p1.cfg
 python3 main.py -j ps3:1 -p 2 -s nes -o $OUTPUT_PATH/nes_p2.cfg
+python3 main.py -j sfc30:0 -p 1 -s nes -o $OUTPUT_PATH/nes_p1.cfg
+python3 main.py -j sfc30:1 -p 2 -s nes -o $OUTPUT_PATH/nes_p2.cfg
+
+# Sega Megadrive/Genesis
+python3 main.py -j sfc30:0 -p 1 -s genesis -o $OUTPUT_PATH/genesis_p1.cfg
+python3 main.py -j sfc30:1 -p 2 -s genesis -o $OUTPUT_PATH/genesis_p2.cfg

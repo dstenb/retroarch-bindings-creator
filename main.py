@@ -3,6 +3,7 @@ import argparse
 from joysticks import get_joysticks
 from n64 import N64Bindings
 from ps3 import PS3Bindings
+from sfc30 import SFC30Bindings
 from xbox360 import Xbox360Bindings
 
 
@@ -16,10 +17,12 @@ FULL_NAME_MAPPINGS = {
     "n64:1": "HuiJia  USB GamePad:1",
     "ps3:0": "Sony PLAYSTATION(R)3 Controller:0",
     "ps3:1": "Sony PLAYSTATION(R)3 Controller:0",
+    "sfc30:0": "8Bitdo SFC30 GamePad:0",
+    "sfc30:1": "8Bitdo SFC30 GamePad:1",
     "xbox360:0": "Xbox 360 Wireless Receiver:0",
     "xbox360:1": "Xbox 360 Wireless Receiver:1",
     "xbox360:2": "Xbox 360 Wireless Receiver:2",
-    "xbox360:3": "Xbox 360 Wireless Receiver:3",
+    "xbox360:3": "Xbox 360 Wireless Receiver:3"
 }
 
 
@@ -57,6 +60,8 @@ def create_bindings(gamepad, player_no, system):
         "n64:1": N64Bindings(),
         "ps3:0": PS3Bindings(),
         "ps3:1": PS3Bindings(),
+        "sfc30:0": SFC30Bindings(),
+        "sfc30:1": SFC30Bindings(),
         "xbox360:0": Xbox360Bindings(),
         "xbox360:1": Xbox360Bindings(),
         "xbox360:2": Xbox360Bindings(),
@@ -70,6 +75,7 @@ def create_bindings(gamepad, player_no, system):
     output = []
 
     joysticks = get_joysticks()
+    print(joysticks)
     udev_index = joysticks[FULL_NAME_MAPPINGS[gamepad]]
 
     output.append("input_player{}_joypad_index = \"{}\"".format(
